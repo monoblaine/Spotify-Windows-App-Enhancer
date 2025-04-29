@@ -37,14 +37,14 @@ cp $spa_file_name $spa_file_name.bak &&
 unzip -q $spa_file_name -d $spa_folder_name &&
 rm $spa_file_name &&
 cd $spa_folder_name &&
-perl -0777 -pi -e 's/--encore-body-font-stack:[\w\W]+?;/--encore-body-font-stack:"'$font_family'";/g'         "$css1" &&
-perl -0777 -pi -e 's/--encore-title-font-stack:[\w\W]+?;/--encore-title-font-stack:"'$font_family'";/g'       "$css1" &&
-perl -0777 -pi -e 's/--encore-variable-font-stack:[\w\W]+?;/--encore-variable-font-stack:"'$font_family'";/g' "$css1" &&
+perl -0777 -pi -e 's/--encore-body-font-stack:[\w\W]+?;/--encore-body-font-stack:"'"$font_family"'";/g'         "$css1" &&
+perl -0777 -pi -e 's/--encore-title-font-stack:[\w\W]+?;/--encore-title-font-stack:"'"$font_family"'";/g'       "$css1" &&
+perl -0777 -pi -e 's/--encore-variable-font-stack:[\w\W]+?;/--encore-variable-font-stack:"'"$font_family"'";/g' "$css1" &&
 perl -0777 -pi -e 's/font-weight:800;text-wrap:balance/font-weight:400;text-wrap:balance/g'                   "$css1" &&
 
-perl -0777 -pi -e 's/--encore-body-font-stack:[\w\W]+?;/--encore-body-font-stack:"'$font_family'";/g'         "$css2" &&
-perl -0777 -pi -e 's/--encore-title-font-stack:[\w\W]+?;/--encore-title-font-stack:"'$font_family'";/g'       "$css2" &&
-perl -0777 -pi -e 's/--encore-variable-font-stack:[\w\W]+?;/--encore-variable-font-stack:"'$font_family'";/g' "$css2" &&
+perl -0777 -pi -e 's/--encore-body-font-stack:[\w\W]+?;/--encore-body-font-stack:"'"$font_family"'";/g'         "$css2" &&
+perl -0777 -pi -e 's/--encore-title-font-stack:[\w\W]+?;/--encore-title-font-stack:"'"$font_family"'";/g'       "$css2" &&
+perl -0777 -pi -e 's/--encore-variable-font-stack:[\w\W]+?;/--encore-variable-font-stack:"'"$font_family"'";/g' "$css2" &&
 perl -0777 -pi -e 's/font-weight:800;text-wrap:balance/font-weight:400;text-wrap:balance/g'                   "$css2" &&
 
 # t===i.O.UP&&(0,r.MS)(o,u(e,o,i.O.UP,n))
