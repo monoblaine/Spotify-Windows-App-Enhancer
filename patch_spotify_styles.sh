@@ -10,6 +10,14 @@
 # 4. Will break on each update because of the changes in minified code.
 # =================================================================================
 
+font_family="Dubuntu Sans"
+path_to_spa_folder="$APPDATA\\Spotify\\Apps\\"
+spa_file_name="xpui.spa"
+spa_folder_name=xpui
+css1="pip-mini-player.css"
+css2="xpui.css"
+js="xpui.js"
+
 search_pattern () {
     pattern=$1
     text=$2
@@ -23,14 +31,6 @@ search_pattern () {
         fi
     fi
 }
-
-font_family="Dubuntu Sans"
-path_to_spa_folder="$APPDATA\\Spotify\\Apps\\"
-spa_file_name="xpui.spa"
-spa_folder_name=xpui
-css1="pip-mini-player.css"
-css2="xpui.css"
-js="xpui.js"
 
 cd "$path_to_spa_folder" &&
 cp $spa_file_name $spa_file_name.bak &&
